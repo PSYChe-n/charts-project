@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>项目适配方案</title>
+    <script src="js/flexible.js"></script>
+    <style>
+        /* 只让屏幕处于1024-1920之间进行等比例缩放 */
+        /* 当页面小于1024后 html的文字固定是42.66 */
+        @media screen and (max-width: 1024px) {
+            html {
+                font-size: 42.66px !important;
+            }
+        }
+
+        /* 当页面大于1920后 html的文字大小固定是80px */
+        @media screen and (min-width: 1920px) {
+            html {
+                font-size: 80px !important;
+            }
+        }
+
+        div {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: pink;
+        }
+
+        .one {
+            display: flex;
+        }
+
+        .two {
+            background-color: green;
+        }
+
+        .three {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div class="one">
+        <div class="ww">
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    </div>
+</body>
+
+</html>
